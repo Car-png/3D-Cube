@@ -4,4 +4,10 @@ body {
   min-height: 100vh;
   background: radial-gradient(#222, #000); }
 
+.container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: auto; }
+
 /*# sourceMappingURL=3D-Cube.css.map */
