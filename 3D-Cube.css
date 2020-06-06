@@ -1,0 +1,7 @@
+body {
+  perspective: 1000px;
+  display: grid;
+  min-height: 100vh;
+  background: radial-gradient(#222, #000); }
+
+/*# sourceMappingURL=3D-Cube.css.map */

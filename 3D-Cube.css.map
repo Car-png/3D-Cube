@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAI;EACE,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,2BAA0B",
+"sources": ["3D-Cube.scss"],
+"names": [],
+"file": "3D-Cube.css"
+}
