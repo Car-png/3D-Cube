@@ -12,6 +12,213 @@ body{
       height: $size;
       position: relative;
       margin: auto;
-      color: blue;
 }
 
+.cubo{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      animation: rotation 8s infinite cubic-bezier(.3,.55,.81,.5);
+      transform: translateZ(-#{$size / 2}) rotateX(0) rotateY(0) rotateZ(0);
+
+      @keyframes rotation {
+            to {
+                  transform: translateZ(-#{$size / 2}) rotateX(1turn) rotateY(1turn) rotateZ(0);
+            }
+      }
+}
+
+.cara{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #fff;
+      color: #fff;
+      display: grid;
+      grid-template-columns: repeat(3,100px);
+      grid-template-rows: repeat(3,100px);
+      justify-items: center;
+      align-items: center;
+      
+      span{
+            animation: dots 4s linear infinite alternate;
+            
+            @keyframes dots {
+                  0%, 50% {
+                        opacity: 0;
+                  }
+                  100%{
+                        opacity: 1;
+                  }
+            }
+      }
+}
+
+.cara:nth-child(1) {
+      transform: translateZ(#{$size / 2});
+}
+
+.cara:nth-child(2) {
+      transform: translateX(#{$size / 2}) rotateY(90deg);
+}
+
+.cara:nth-child(3) {
+      transform: translateZ(-#{$size / 2}) rotateY(180deg);
+}
+
+.cara:nth-child(4) {
+      transform: translateX(-#{$size / 2}) rotateY(-90deg);
+}
+
+.cara:nth-child(5) {
+      transform: translateY(-#{$size / 2}) rotatex(90deg);
+}
+
+.cara:nth-child(6) {
+      transform: translateY(-#{$size / 2}) rotateX(90deg);
+}
+
+.cara:nth-child(7) {
+      transform: translateY(-#{$size / 6}) rotateX(90deg);
+}
+
+.cara:nth-child(8) {
+      transform: translateZ(#{$size / 6}) rotateX(90deg);
+}
+
+.cara:nth-child(9) {
+      transform: translateZ(#{$size / 6});
+}
+
+.cara:nth-child(10) {
+      transform: translateZ(-#{$size / 6});
+}
+
+.cara:nth-child(11) {
+      transform: translateX(-#{$size / 6}) rotateY(90deg);
+}
+
+.cara:nth-child(12) {
+      transform: translateX(#{$size / 6}) rotateY(90deg);
+}
+
+@for $i from 1 through 10 {
+      .cara:nth-child(#{$i}) {
+            background: hsla($i * 36, 100, 40, .3);
+      }
+}
+
+
+
+// $size: 300px;
+
+// body {
+//   perspective: 1000px;
+//   display: grid;
+//   min-height: 100vh;
+//   background: radial-gradient(#222,#000);
+// }
+
+// .container {
+//   width: $size;
+//   height: $size;
+//   position: relative;
+//   margin: auto;
+// }
+
+// .cubo {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   transform-style: preserve-3d;
+//   animation: rotation 8s infinite cubic-bezier(.3,.55,.81,.5);
+//   transform: translatez(-#{$size / 2}) rotatex(0) rotatey(0) rotatez(0);
+  
+  
+//   @keyframes rotation {
+//     to {
+//       transform: translatez(-#{$size / 2}) rotatex(1turn) rotatey(1turn) rotatez(0);
+//     }
+//   }
+// }
+
+// .cara {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   border: 2px solid #fff;
+//   color: #fff;
+//   display: grid;
+//   grid-template-columns: repeat(3,100px);
+//   grid-template-rows: repeat(3,100px);
+//   justify-items: center;
+//   align-items: center;
+  
+//   span {
+//     animation: dots 4s linear infinite alternate;
+    
+//     @keyframes dots {
+//       0%, 50% {
+//         opacity: 0;
+//       }
+//       100% {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+
+// .cara:nth-child(1) {
+//   transform: translatez(#{$size / 2});
+// }
+
+// .cara:nth-child(2) {
+//   transform: translatex(#{$size / 2}) rotateY(90deg);
+// }
+
+// .cara:nth-child(3) {
+//   transform: translatez(-#{$size / 2}) rotateY(180deg);
+// }
+
+// .cara:nth-child(4) {
+//   transform: translatex(-#{$size / 2}) rotateY(-90deg);
+// }
+
+// .cara:nth-child(5) {
+//   transform: translatey(-#{$size / 2}) rotatex(90deg);
+// }
+
+// .cara:nth-child(6) {
+//   transform: translatey(#{$size / 2}) rotatex(90deg);
+// }
+
+// .cara:nth-child(7) {
+//   transform: translatey(-#{$size / 6}) rotatex(90deg);
+// }
+
+// .cara:nth-child(8) {
+//   transform: translatey(#{$size / 6}) rotatex(90deg);
+// }
+
+// .cara:nth-child(9) {
+//   transform: translatez(#{$size / 6});
+// }
+
+// .cara:nth-child(10) {
+//   transform: translatez(-#{$size / 6});
+// }
+
+// .cara:nth-child(11) {
+//   transform: translatex(-#{$size / 6}) rotatey(90deg);
+// }
+
+// .cara:nth-child(12) {
+//   transform: translatex(#{$size / 6}) rotatey(90deg);
+// }
+
+// @for $i from 1 through 10 {
+//   .cara:nth-child(#{$i}) {
+//     background: hsla($i * 36, 100, 40,.3);
+//   }
+// }
