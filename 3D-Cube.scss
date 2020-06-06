@@ -12,6 +12,11 @@ body{
       height: $size;
       position: relative;
       margin: auto;
+      box-shadow: 0px 15px 15px white,
+      5px 5px 5px white,
+      5px 5px 5px white,
+      5px 5px 5px white;
+      -webkit-box-reflect: below 50px linear-gradient(transparent, rgba(255, 255, 255, 0.472));
 }
 
 .cubo{
@@ -21,6 +26,7 @@ body{
       transform-style: preserve-3d;
       animation: rotation 8s infinite cubic-bezier(.3,.55,.81,.5);
       transform: translateZ(-#{$size / 2}) rotateX(0) rotateY(0) rotateZ(0);
+      
 
       @keyframes rotation {
             to {
