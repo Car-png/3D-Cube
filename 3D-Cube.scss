@@ -1,21 +1,22 @@
-$size: 300px;
+$size: 150px;
 
 body{
       perspective: 1000px;
       display: grid;
       min-height: 100vh;
-      background: radial-gradient(#222,#000);
+      background: #1F232A;
 }
 
 .container{
       width: $size;
       height: $size;
       position: relative;
+      border: 4px solid #1F232A;
       margin: auto;
-      box-shadow: 0px 15px 15px white,
-      5px 5px 5px white,
-      5px 5px 5px white,
-      5px 5px 5px white;
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+      20px 20px 20px rgba(0, 0, 0, 0.3),
+      inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+      inset 20px 20px 20px rgba(0, 0, 0, 0.3);
       -webkit-box-reflect: below 50px linear-gradient(transparent, rgba(255, 255, 255, 0.472));
 }
 
@@ -24,7 +25,7 @@ body{
       width: 100%;
       height: 100%;
       transform-style: preserve-3d;
-      animation: rotation 8s infinite cubic-bezier(.3,.55,.81,.5);
+      animation: rotation 18s infinite cubic-bezier(.3,.55,.81,.5);
       transform: translateZ(-#{$size / 2}) rotateX(0) rotateY(0) rotateZ(0);
       
 
@@ -39,9 +40,8 @@ body{
       position: absolute;
       width: 100%;
       height: 100%;
-      border: 2px solid #fff;
       color: #fff;
-      display: grid;
+      display: flex;
       grid-template-columns: repeat(3,100px);
       grid-template-rows: repeat(3,100px);
       justify-items: center;
